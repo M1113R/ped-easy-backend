@@ -14,7 +14,7 @@ import { ProductModule } from './app/product/product.module';
         username: configService.get('DB_USERNAME', 'root'),
         password: configService.get('DB_PASSWORD', '123'),
         database: configService.get('DB_DATABASE', 'pedeasy'),
-        entities: [],
+        entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true,
       }),
     }),

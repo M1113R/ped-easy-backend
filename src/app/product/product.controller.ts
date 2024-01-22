@@ -32,8 +32,8 @@ export class ProductController {
     return await this.productService.findOne(id);
   }
 
-  @Put(':id')
-  async update(@Param('id', new ParseUUIDPipe()) id: string, @Body() body) {
+  @Put()
+  async update(@Param('id') id: string, @Body() body) {
     return this.productService.update(id, body);
   }
 

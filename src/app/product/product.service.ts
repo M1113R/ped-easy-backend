@@ -29,7 +29,7 @@ export class ProductService {
   }
 
   async update(id: string, data) {
-    const product = await this.findOne(data.id);
+    const product = await this.findOne(id);
 
     if (!product) throw new NotFoundException('Product not found');
 

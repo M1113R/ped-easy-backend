@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ProductModule } from './app/product/product.module';
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
@@ -17,6 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: true,
       }),
     }),
+    ProductModule,
   ],
   controllers: [],
   providers: [],

@@ -16,6 +16,7 @@ import { ProductModule } from './app/product/product.module';
         database: configService.get('DB_DATABASE', 'pedeasy'),
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true,
+        autoLoadEntities: true,
       }),
     }),
     ProductModule,
